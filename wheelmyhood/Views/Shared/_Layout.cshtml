@@ -1,0 +1,187 @@
+﻿<script type='text/javascript'>
+    //<![CDATA[
+    /*  see: https://www.bloggertipandtrick.net/load-google-fonts-without-render-blocking-css/ */
+    WebFontConfig = {
+        google: {
+            families: ['Open Sans:300,400,700']
+        }
+    };
+
+    (function(d) {
+        var wf = d.createElement('script'),
+            s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+    })(document);
+
+//]]>
+</script>
+
+<!DOCTYPE html>
+<html lang="en-gb" dir="ltr" vocab="http://schema.org/">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - wheelmyhood</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="/lib/uikit-3.0.0-rc.15/css/uikit.css" />
+        <link href="/css/site.css" rel="stylesheet" asp-append-version="true" type="text/css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/uikit-3.0.0-rc.15/css/uikit.min.css"
+              asp-fallback-href="~/lib/uikit-3.0.0-rc.15/css/uikit.min.css"
+              asp-fallback-test-class="hidden"
+              asp-fallback-test-property="visibility"
+              asp-fallback-test-value="hidden" />
+
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+    <!-- start: site-page -->
+    <div class="site-page">
+        <div class="uk-offcanvas-content">
+            <!-- start: uk-visible@m uk-navbar-transparent -->
+            <div class="page-header uk-visible@m uk-navbar-transparent" uk-header>
+                <!-- start: uk-visible@m uk-navbar-transparent -->
+                <div uk-sticky cls-active="uk-navbar-sticky" sel-target=".uk-navbar-container"
+                     animation="uk-animation-slide-top" cls-inactive="uk-navbar-transparent uk-light"
+                     class="uk-sticky">
+                    <!-- start: uk-navbar-container uk-navbar-transparent uk-light -->
+                    <div class="uk-navbar-container uk-navbar-transparent uk-light">
+                        <!-- start: uk-container -->
+                        <div class="uk-container">
+                            <!-- start: uk-navbar-center -->
+                            <nav class="uk-navbar-center uk-navar-container" uk-navbar id="main-nav">
+                                <div class="uk-navbar-left">
+                                    <a href="https://demo.yootheme.com/themes/joomla/2018/flow" class="uk-navbar-item uk-logo">
+                                        WHM
+                                    </a>
+                                </div>
+                                <div class="uk-navbar-right">
+                                    <ul class="uk-navbar-nav">
+                                        <li class="uk-active"><a asp-page="/Index">Home</a></li>
+                                        <li class="uk-parent"><a asp-page="/Cites">About</a></li>
+                                        <li class="uk-parent"><a asp-page="/Contact">Contact</a></li>
+                                    </ul>
+                                </div>
+                            </nav>
+                            <!-- end: uk-navbar-center -->
+                        </div>
+                        <!-- end: uk-container -->
+                    </div>
+                    <!-- end: uk-navbar-container uk-navbar-transparent uk-light -->
+                </div>
+                <!-- end: uk-visible@m uk-navbar-transparent -->
+            </div>
+            <!-- end: uk-visible@m uk-navbar-transparent -->
+
+            <partial name="_CookieConsentPartial" />
+            @RenderBody()
+
+            <!-- start: uk-section-default uk-section uk-section-large -->
+            <div class="uk-section-default uk-section uk-section-large">
+                <!-- start: uk-container uk-grid-margin -->
+                <div class="uk-container uk-grid-margin">
+                    <!-- start: uk-flex-middle -->
+                    <div class="uk-flex-middle" uk-grid>
+                        <!-- start: uk-width-3-4 uk-first-column -->
+                        <div class="uk-width-3-4 uk-first-column">
+                            <hr>
+                        </div>
+                        <!-- end: uk-width-3-4 uk-first-column -->
+                        <div class="uk-width-expand">
+                            <!-- end: uk-margin uk-text-right -->
+                            <div class="uk-margin uk-text-right">
+                                <a href="#" uk-totop>
+                                </a>
+                            </div>
+                            <!-- end:uk-margin uk-text-right -->
+                        </div>
+                    </div>
+                    <!-- end: uk-flex-middle -->
+                </div>
+                <!-- end: uk-container uk-grid-margin -->
+                
+
+                <!-- start: uk-container uk-container-small uk-grid-margin -->
+                <div class="uk-container uk-container-small uk-grid-margin">
+                    <!-- start: uk-flex-middle -->
+                    <div class="uk-flex-middle" uk-grid>
+                        <!-- start: k-width-small@m uk-first-column -->
+                        <div class="uk-width-small@m uk-first-column">
+                            <div class="uk-margin uk-width-small@m uk-text-left@m uk-text-center">
+                                <img data-src="/themes/joomla/2018/nioh-studio/images/yootheme/logo-mobile.svg" class="el-image" alt="" uk-img="" width="70" src="https://demo.yootheme.com/themes/joomla/2018/nioh-studio/images/yootheme/logo-mobile.svg">
+                            </div>
+                        </div>
+                        <!-- end: k-width-small@m uk-first-column -->
+                        
+
+                        <!-- start: uk-width-expand@m -->
+                        <div class="uk-width-expand@m">
+                            <div class="uk-width-xlarge@m uk-text-left@m uk-text-center">
+                                <ul class="uk-subnav uk-margin-remove-bottom uk-subnav-divider uk-flex-left@m uk-flex-center" uk-margin="">
+                                    <li class="uk-first-column"><a asp-page="/Index">Home</a></li>
+                                    <li class=""><a asp-page="/Index">Cities</a></li>
+                                    <li class=""><a asp-page="/Index">About</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end: uk-width-expand@m -->
+
+                    </div>
+                    <!-- start: uk-flex-middle -->
+                </div>
+                <!-- end: uk-container uk-container-small uk-grid-margin -->
+            </div>
+            <!-- end: uk-section-default uk-section uk-section-large -->
+
+        </div>
+    </div>
+    <!-- end: site-page -->
+
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/lib/uikit-3.0.0-rc.15/js/uikit.js" asp-append-version="true"></script>
+        <script src="~/lib/uikit-3.0.0-rc.15/js/uikit-icons.min.js" asp-append-version="true"></script>
+        <script src="~/lib/isotope/dist/isotope.pkgd.min.js" asp-append-version="true"></script>
+    </environment>
+
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-xBuQ/xzmlsLoJpyjoggmTEz8OWUFM0/RC5BsqQBDX2v5cMvDHcMakNTNrHIW2I5f">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.15/js/uikit.min.js"
+                asp-fallback-src="~/lib/uikit-3.0.0-rc.15/js/uikit.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-S2SN9f0XFbh2t/omvAKIRN0v2CBFKQqwtquHFWt9bllxaZYvk9vTiG0I7uwyBU/E">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.15/js/uikit-icons.min.js"
+                asp-fallback-src="~/lib/uikit-3.0.0-rc.15/js/uikit-icons.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-pt2UltBr/PtYb8Mca371LsdADo1QKBGQc68dxeRELc0lJIYBu9lbV2FyujJhd0e9">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"
+                asp-fallback-src="~/lib/dist/isotope.pkgd.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-vtH+5pZsjdWxaTWlFSCrWM6i0TIG0HKOqJbPo91LB35dvWpVzuWdJeVoNweP+eoY">
+        </script>
+
+
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
