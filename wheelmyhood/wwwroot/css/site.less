@@ -1,0 +1,129 @@
+﻿@font-family: 'Open Sans', sans-serif;
+@cream: #eeeeec;
+@std-black: #28292b;
+
+
+/*
+    Page
+
+*/
+html, body {
+    font-family: @font-family;
+    color: @std-black;
+}
+
+.site-page {
+    position: relative;
+    border-top:0;
+}
+
+
+.page-header {
+    position: absolute;
+    z-index: 980;
+    left: 0;
+    right: 0;
+}
+
+/*
+    Elements
+*/
+.uk-card {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+}
+/*
+    Typography
+*/
+
+h1, .uk-h1, h2, .uk-h2, h3, .uk-h3, h4, .uk-h4, h5, .uk-h5, h6, .uk-h6 {
+    color: @std-black;
+    font-family: @font-family;
+}
+
+.text-go-white {
+    color: #fff!important;
+}
+
+/*
+    Navigation
+*/
+
+.uk-light .uk-navbar-nav > li.uk-active > a {
+    color: @std-black;
+}
+
+.uk-light .uk-navbar-nav > li > a {
+    white-space: nowrap;
+}
+
+.uk-navbar-nav > li > a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    bottom: 50%;
+    height: 1px;
+    background-color: transparent;
+    transition: .3s ease-in-out;
+    transition-property: background-color,border-color,box-shadow,height,right;
+    left: 26px;
+    right: calc(102% - 26px);
+}
+
+.uk-light .uk-navbar-nav > li.uk-active > a::before {
+    right: 26px;
+    background-color: @std-black;
+}
+
+.navbar .brand, .navbar .nav > li > a, .navbar-search, .uk-navbar-item, .uk-navbar-nav > li > a, .uk-navbar-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 100px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.uk-light .uk-navbar-nav > li > a {
+    color: @std-black;
+    transition: .2s ease-in-out;
+    transition-property: color,background-color,border-color,box-shadow;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.uk-light .uk-navbar-nav > li:hover > a::before,
+.uk-light .uk-navbar-nav > li > a.uk-open::before,
+.uk-light .uk-navbar-nav > li > a:focus::before {
+    right: 26px;
+    background-color: @std-black;
+}
+
+
+.uk-light .uk-navbar-nav > li:hover > a {
+    color: @std-black;
+}
+
+/*
+    Responsive
+*/
+
+/* Large devices (laptops/desktops, 960px and up) */
+@media only screen and (min-width: 960px) {
+    .site-page {
+        border-width: 50px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .site-page {
+        border: 30px solid transparent;
+    }
+} 
