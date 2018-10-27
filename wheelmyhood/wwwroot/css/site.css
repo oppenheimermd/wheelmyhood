@@ -9,13 +9,20 @@ body {
 }
 .site-page {
   position: relative;
-  border: 14px solid #ffffff;
+  border-top: 0;
 }
 .page-header {
   position: absolute;
   z-index: 980;
   left: 0;
   right: 0;
+}
+.center-content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: block;
+  text-align: center;
 }
 /*
     Elements
@@ -65,7 +72,7 @@ h6,
   transition: 0.3s ease-in-out;
   transition-property: background-color, border-color, box-shadow, height, right;
   left: 26px;
-  right: calc(76%);
+  right: calc(102% - 26px);
 }
 .uk-light .uk-navbar-nav > li.uk-active > a::before {
   right: 26px;
@@ -104,4 +111,19 @@ h6,
 }
 .uk-light .uk-navbar-nav > li:hover > a {
   color: #28292b;
+}
+/*
+    Responsive
+*/
+/* Large devices (laptops/desktops, 960px and up) */
+@media only screen and (min-width: 960px) {
+  .site-page {
+    border-width: 50px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .site-page {
+    border: 30px solid transparent;
+  }
 }
