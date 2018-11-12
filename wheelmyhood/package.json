@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "dependencies": {
     "browserify": "~16.2.2",
-    "less": "~3.8.0"
+    "less": "~3.8.0",
+    "minimatch": "^3.0.4",
+    "shell-quote": "^1.6.1"
   },
   "exclude": [
     "**/bin",

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace wheelmyhood.Models
+namespace WheelMyHood.Models
 {
     public class PlacePhoto
     {

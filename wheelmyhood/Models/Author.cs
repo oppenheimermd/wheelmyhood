@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace wheelmyhood.Models
+namespace WheelMyHood.Models
 {
     public class Author
     {

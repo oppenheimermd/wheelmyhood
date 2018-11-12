@@ -1,8 +1,8 @@
 ﻿using Microsoft.Extensions.Caching.Memory;
-using wheelmyhood.Models;
+using WheelMyHood.Models;
 using System.Collections.Generic;
 
-namespace wheelmyhood.Service
+namespace WheelMyHood.Service
 {
     public interface ICityService
     {

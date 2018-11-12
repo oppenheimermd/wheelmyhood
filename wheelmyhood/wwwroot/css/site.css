@@ -112,6 +112,9 @@ h6,
 .uk-light .uk-navbar-nav > li:hover > a {
   color: #28292b;
 }
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background: #ffffff;
+}
 /*
     Responsive
 */
