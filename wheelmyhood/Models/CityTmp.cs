@@ -1,5 +1,5 @@
 ﻿
-namespace wheelmyhood.Models
+namespace WheelMyHood.Models
 {
     public class CityTmp
     {

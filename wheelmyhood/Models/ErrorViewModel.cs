@@ -1,6 +1,4 @@
-using System;
-
-namespace wheelmyhood.Models
+namespace WheelMyHood.Models
 {
     public class ErrorViewModel
     {

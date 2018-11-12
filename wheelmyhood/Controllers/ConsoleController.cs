@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace wheelmyhood.Controllers
+namespace WheelMyHood.Controllers
 {
     public class ConsoleController : Controller
     {

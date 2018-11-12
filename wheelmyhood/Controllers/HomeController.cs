@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using wheelmyhood.Models;
+using WheelMyHood.Models;
 
-namespace wheelmyhood.Controllers
+namespace WheelMyHood.Controllers
 {
     public class HomeController : Controller
     {
