@@ -7,8 +7,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WheelMyHood.Data;
+using WheelMyHood.Service;
 
 namespace wheelmyhood
 {
@@ -33,6 +36,12 @@ namespace wheelmyhood
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<IWMHService, WMHService>();
+
+            //  Register blog context with dependency injection
+            services.AddDbContext<WmhDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("BlogContextString")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutConsole.cshtml";
+}
+@model WheelMyHood.Models.Region
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutConsole.cshtml";
+}
+@section DefaultHeader{
+    <h1>Default Header</h1>
+}
+
+<form asp-action="Create">
+    <fieldset class="uk-fieldset">
+
+        <legend class="uk-legend">Add New Region</legend>
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="uk-margin">
+            <input asp-for="RegionCode" class="uk-input" placeholder="Region code"/>
+            <span asp-validation-for="RegionCode" class="uk-form-danger"></span>
+        </div>
+        
+        <div class="uk-margin">
+            <input asp-for="ContinentName" class="uk-input" placeholder="Continent name"/>
+            <span asp-validation-for="ContinentName" class="uk-form-danger"></span>
+        </div>
+
+        <div class="uk-margin">
+            <input type="submit" value="Create" class="uk-button uk-button-primary" />
+        </div>
+
+    </fieldset>
+</form>
+
