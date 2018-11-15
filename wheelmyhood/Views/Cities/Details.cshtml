@@ -1,0 +1,33 @@
+﻿@model WheelMyHood.Models.City
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_LayoutConsole.cshtml";
+}
+@section DefaultHeader{
+    <h1>Default Header</h1>
+}
+
+<div class="uk-child-width-1-1@m uk-grid-small uk-grid-match" uk-grid>
+    <div>
+        <div class="uk-card uk-card-default uk-card-body">
+            <h3 class="uk-card-title">Region details</h3>
+            <p>City Code:</p>
+            <br />
+            <p>@Model.CityCode</p>
+            <br />
+            <p>City:</p>
+            <br />
+            <p>@Model.CityName</p>
+            <br />
+            <p>Region:</p>
+            <br />
+            <p>@Model.Region.ContinentName</p>
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CityCode">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

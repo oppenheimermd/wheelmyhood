@@ -1,0 +1,58 @@
+﻿@model IEnumerable<WheelMyHood.Models.City>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_LayoutConsole.cshtml";
+}
+@section DefaultHeader{
+    <ul class="uk-breadcrumb">
+        <li><span href="">Home</span></li>
+    </ul>
+}
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="uk-table uk-table-divide uk-table-hover">
+    <thead>
+        <tr>
+            <th>
+                City
+            </th>
+            <th>
+                City code
+            </th>
+            <th>
+                Region
+            </th>
+            <th>
+                Region code
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CityName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CityCode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Region.ContinentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Region.RegionCode)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.CityCode">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.CityCode">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.CityCode">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
