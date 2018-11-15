@@ -1,0 +1,44 @@
+﻿@model WheelMyHood.Models.City
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_LayoutConsole.cshtml";
+}
+@section DefaultHeader{
+    <ul class="uk-breadcrumb">
+        <li><a asp-action="Index">Home</a></li>
+        <li><span href="">Edit City</span></li>
+    </ul>
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <fieldset class="uk-fieldset">
+                <legend class="uk-legend">Edit City</legend>
+                <div asp-validation-summary="ModelOnly" class="uk-form-danger"></div>
+                <input type="hidden" asp-for="CityCode" />
+
+                <div class="uk-margin">
+                    <input asp-for="CityName" class="uk-input" placeholder="City name" />
+                    <span asp-validation-for="CityName" class="uk-form-danger"></span>
+                </div>
+
+                <div class="uk-margin">
+                    <select asp-for="ContinentCode" class="uk-select" asp-items="ViewBag.ContinentCode"></select>
+                </div>
+
+
+                <div class="uk-margin">
+                    <input type="submit" value="Save" class="uk-button uk-button-primary" />
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

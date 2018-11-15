@@ -1,0 +1,41 @@
+﻿@model WheelMyHood.Models.City
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_LayoutConsole.cshtml";
+}
+@section DefaultHeader{
+    <h1>Default Header</h1>
+}
+
+    <form asp-action="Create">
+        <fieldset class="uk-fieldset">
+            <legend class="uk-legend">Add new city</legend>
+            <div asp-validation-summary="ModelOnly" class="uk-form-danger"></div>
+
+            <div class="uk-margin">
+                <input asp-for="CityCode" class="uk-input" placeholder="Four letter city code"/>
+                <span asp-validation-for="CityCode" class="uk-form-danger"></span>
+            </div>
+
+            <div class="uk-margin">
+                <input asp-for="CityName" class="uk-input" placeholder="City long name"/>
+                <span asp-validation-for="CityName" class="uk-form-danger"></span>
+            </div>
+
+            <div class="uk-margin">
+                <select asp-for="ContinentCode" class="uk-select" asp-items="ViewBag.ContinentCode"></select>
+            </div>
+
+            <div class="uk-margin">
+                <input type="submit" value="Create" class="uk-button uk-button-primary" />
+            </div>
+
+        </fieldset>
+    </form>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
